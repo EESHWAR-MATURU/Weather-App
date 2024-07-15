@@ -1,4 +1,3 @@
-// WeatherApp.js
 import React, { useState } from 'react';
 import './Weather.css';
 
@@ -7,7 +6,7 @@ const WeatherApp = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [hourlyForecast, setHourlyForecast] = useState([]);
 
-    const apiKey = 'c98b1c6e78e599dea3854a01d095cbd4';
+    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
     const getWeather = () => {
         if (!city) {
